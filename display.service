@@ -1,0 +1,12 @@
+[Unit]
+Description=Your Script Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/admin/lcd/display.py
+WorkingDirectory=/home/admin/lcd
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
